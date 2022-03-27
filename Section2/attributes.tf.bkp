@@ -1,0 +1,31 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "3.61.0"
+    }
+  }
+}
+
+provider "aws" {
+  region     = "us-west-2"
+  access_key = "AKIA5RSSUULDTSMJCJEN"
+  secret_key = "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"
+}
+
+resource "aws_eip" "lb" {
+  #instance = aws_instance.web.id
+  vpc = true
+}
+
+output "eip" {
+  value = aws_eip.lb.public_ip
+}
+
+resource "aws_s3_bucket" "mys3" {
+  bucket = "tflabs-attribute-demo-007"
+}
+
+output "mys3bucket" {
+  value = aws_s3_bucket.mys3.bucket_domain_name
+}
