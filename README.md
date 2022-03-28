@@ -1,4 +1,4 @@
-## Terraform Practice Reporsitory
+## Terraform Practice Repository
 
 #### TF-Labs
 
