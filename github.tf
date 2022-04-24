@@ -1,6 +1,6 @@
 provider "github" {
   # Configuration options
-  token = "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"
+  token = "<your github token>"
 
 }
 
