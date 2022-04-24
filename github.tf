@@ -1,6 +1,6 @@
 provider "github" {
   # Configuration options
-  token = "<your github tocken>"
+  token = "<your github token>"
 
 }
 
